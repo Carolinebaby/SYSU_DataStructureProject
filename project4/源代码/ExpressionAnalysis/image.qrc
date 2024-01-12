@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>favicon.ico</file>
+        <file>favcion.png</file>
+        <file>decision-tree.png</file>
+    </qresource>
+</RCC>
