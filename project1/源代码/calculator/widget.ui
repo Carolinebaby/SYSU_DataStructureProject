@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>533</width>
+    <height>773</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei UI</family>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>calculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/icon/favicon.ico</normaloff>:/icon/favicon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(255, 254, 246)</string>
+  </property>
+  <widget class="QTextEdit" name="inputbox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>431</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei UI</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="outputbox">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>431</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>11</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 255, 255);
+
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::TextBrowserInteraction</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleText">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>10</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(73, 104, 186)</string>
+   </property>
+   <property name="text">
+    <string>一元稀疏多项式计算器</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="outputlabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>431</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 0, 0);
+background-color:rgb(255, 229, 241);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>输出</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputlabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>431</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 0, 0);
+background-color:rgb(255, 229, 241);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>输入</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="leftparenthesis">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>400</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#leftparenthesis{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#leftparenthesis:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>(</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="rightparenthesis">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>400</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#rightparenthesis{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#rightparenthesis:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>)</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="parameterbutton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>400</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#parameterbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#parameterbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>x</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clearbutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>450</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#clearbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#clearbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>clear</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="powerbutton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>450</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#powerbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#powerbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>x^(y)</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="productbutton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>450</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#productbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#productbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>*</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backbutton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>450</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#backbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#backbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>back</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sevenbutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>500</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#sevenbutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#sevenbutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:2px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="eightbutton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>500</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#eightbutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#eightbutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ninebutton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>500</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ninebutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#ninebutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fourbutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>550</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#fourbutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#fourbutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fivebutton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>550</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#fivebutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border-color: rgb(0, 0, 0);
+border:3px solid rgb(192, 222, 255);
+}
+#fivebutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border-color: rgb(0, 0, 0);
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sixbutton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>550</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#sixbutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#sixbutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="onebutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>600</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#onebutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#onebutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="twobutton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>600</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#twobutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#twobutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="threebutton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>600</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#threebutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#threebutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="subtractbutton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>500</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#subtractbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#subtractbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addbutton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>550</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#addbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#addbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="zerobutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>650</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#zerobutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#zerobutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dotbutton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>650</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#dotbutton{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(243, 248, 255), stop:1 rgb(243, 248, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+#dotbutton:pressed{
+color:rgb(0,0,0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:0 rgb(224, 236, 255), stop:1 rgb(224, 236, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>.</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="equalbutton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>600</y>
+     <width>101</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#equalbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:10px;
+}
+#equalbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>=
+（提交）</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="introductionbutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>710</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#introductionbutton{
+color:rgb(30, 91, 165);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(232, 211, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);}
+#introductionbutton:pressed{
+color:rgb(30, 91, 165);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(203, 190, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>说明</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="closebutton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>710</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文琥珀</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#closebutton{
+color:rgb(30, 91, 165);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(232, 211, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);}
+#closebutton:pressed{
+color:rgb(30, 91, 165);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(203, 190, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="xvalueinputbox">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>350</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="fxoutputbox">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>350</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="getvaluebutton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>350</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#getvaluebutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(232, 211, 255));
+border-radius: 5px;
+border:3px solid rgb(192, 222, 255);
+}
+#getvaluebutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(203, 190, 255));
+border-radius: 5px;
+border:3px solid rgb(192, 222, 255);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>求值</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="xvaluelabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>350</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 0, 0);
+background-color:rgb(255, 229, 241);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;x=&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fxlabel">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>350</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Book Antiqua</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 0, 0);
+background-color:rgb(255, 229, 241);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;f(x)=&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="derivationbutton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>170</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#derivationbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(232, 211, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+
+#derivationbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(203, 190, 255));
+border-radius:10px;
+border:2px solid rgb(192, 222, 255);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>导数</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="nightmodelbutton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>720</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#nightmodelbutton{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgba(192, 222, 255, 255));
+border-radius:15px;
+}
+#nightmodelbutton:pressed{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(167, 202, 255));
+border-radius:15px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>🌙</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="integralbutton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>170</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#integralbutton{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(232, 211, 255));
+border-radius:10px;
+border:3px solid rgb(192, 222, 255);
+}
+
+#integralbutton:pressed{
+color:rgb(0, 0, 0);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(203, 190, 255));
+border-radius:10px;
+border:2px solid rgb(192, 222, 255);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>积分</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
