@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ImageAnalyse</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/image/images/photo.png</normaloff>:/image/images/photo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(249, 253, 255);
+color:black;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QGraphicsView" name="graphicsView">
+         <property name="styleSheet">
+          <string notr="true">border:3px solid rgb(139, 191, 255);
+border-radius: 5px;
+background-color: rgb(255, 252, 240)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="openFileAction"/>
+    <addaction name="saveFileAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>滤镜</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/image/images/panel.png</normaloff>:/image/images/panel.png</iconset>
+     </property>
+     <addaction name="blackImageAction"/>
+     <addaction name="warmColorAction"/>
+     <addaction name="coolColorAction"/>
+     <addaction name="oldColorAction"/>
+     <addaction name="inverseColorAction"/>
+    </widget>
+    <widget class="QMenu" name="Rotate">
+     <property name="title">
+      <string>旋转</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/image/images/rotate.png</normaloff>:/image/images/rotate.png</iconset>
+     </property>
+     <addaction name="ClockwiseRotate_Action"/>
+     <addaction name="AnticlockwiseRotate_Action"/>
+    </widget>
+    <addaction name="originalImageAction"/>
+    <addaction name="ChangeSizeAction"/>
+    <addaction name="menu_6"/>
+    <addaction name="Rotate"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>解压缩</string>
+    </property>
+    <addaction name="CompressImageAction"/>
+    <addaction name="DecompressImageAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <addaction name="ZoomInAction"/>
+    <addaction name="ZoomOutAction"/>
+    <addaction name="originalImageAction"/>
+    <addaction name="clear_Action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openFileAction"/>
+   <addaction name="saveFileAction"/>
+   <addaction name="separator"/>
+   <addaction name="ZoomInAction"/>
+   <addaction name="ZoomOutAction"/>
+   <addaction name="ClockwiseRotate_Action"/>
+   <addaction name="AnticlockwiseRotate_Action"/>
+   <addaction name="separator"/>
+   <addaction name="exit_Action"/>
+  </widget>
+  <action name="openFileAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/loadimage.png</normaloff>:/image/images/loadimage.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </action>
+  <action name="saveFileAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/save.png</normaloff>:/image/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存图片</string>
+   </property>
+  </action>
+  <action name="blackImageAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/circle.png</normaloff>:/image/images/circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>黑白</string>
+   </property>
+  </action>
+  <action name="originalImageAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/originalimage.png</normaloff>:/image/images/originalimage.png</iconset>
+   </property>
+   <property name="text">
+    <string>原图</string>
+   </property>
+  </action>
+  <action name="ChangeSizeAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/maximize.png</normaloff>:/image/images/maximize.png</iconset>
+   </property>
+   <property name="text">
+    <string>修改图片尺寸</string>
+   </property>
+  </action>
+  <action name="CompressImageAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/close.png</normaloff>:/image/images/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>图像压缩</string>
+   </property>
+  </action>
+  <action name="DecompressImageAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/separation.png</normaloff>:/image/images/separation.png</iconset>
+   </property>
+   <property name="text">
+    <string>图像解压</string>
+   </property>
+  </action>
+  <action name="ZoomInAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/zoom-in.png</normaloff>:/image/images/zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="ZoomOutAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/zoom-out.png</normaloff>:/image/images/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="warmColorAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/circle (1).png</normaloff>:/image/images/circle (1).png</iconset>
+   </property>
+   <property name="text">
+    <string>暖色</string>
+   </property>
+  </action>
+  <action name="coolColorAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/circle (2).png</normaloff>:/image/images/circle (2).png</iconset>
+   </property>
+   <property name="text">
+    <string>冷色</string>
+   </property>
+  </action>
+  <action name="oldColorAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/circle (3).png</normaloff>:/image/images/circle (3).png</iconset>
+   </property>
+   <property name="text">
+    <string>复古</string>
+   </property>
+  </action>
+  <action name="inverseColorAction">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/contrast-circle-symbol.png</normaloff>:/image/images/contrast-circle-symbol.png</iconset>
+   </property>
+   <property name="text">
+    <string>反色</string>
+   </property>
+  </action>
+  <action name="clear_Action">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/clean.png</normaloff>:/image/images/clean.png</iconset>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </action>
+  <action name="ClockwiseRotate_Action">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/clockwise-arrow.png</normaloff>:/image/images/clockwise-arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>顺时针旋转90°</string>
+   </property>
+  </action>
+  <action name="AnticlockwiseRotate_Action">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/anti-clockwise.png</normaloff>:/image/images/anti-clockwise.png</iconset>
+   </property>
+   <property name="text">
+    <string>逆时针旋转90°</string>
+   </property>
+  </action>
+  <action name="exit_Action">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/images/logout.png</normaloff>:/image/images/logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

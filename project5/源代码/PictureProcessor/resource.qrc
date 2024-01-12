@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>images/anti-clockwise.png</file>
+        <file>images/circle (1).png</file>
+        <file>images/circle (2).png</file>
+        <file>images/circle (3).png</file>
+        <file>images/circle.png</file>
+        <file>images/clean.png</file>
+        <file>images/clockwise-arrow.png</file>
+        <file>images/close.png</file>
+        <file>images/compress.png</file>
+        <file>images/contrast-circle-symbol.png</file>
+        <file>images/decompress.png</file>
+        <file>images/folder.png</file>
+        <file>images/loadimage.png</file>
+        <file>images/logout.png</file>
+        <file>images/maximize.png</file>
+        <file>images/originalimage.png</file>
+        <file>images/panel.png</file>
+        <file>images/photo.png</file>
+        <file>images/rotate.png</file>
+        <file>images/save.png</file>
+        <file>images/separation.png</file>
+        <file>images/warning.png</file>
+        <file>images/zoom-in.png</file>
+        <file>images/zoom-out.png</file>
+    </qresource>
+</RCC>
