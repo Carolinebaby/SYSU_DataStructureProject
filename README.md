@@ -6,7 +6,7 @@
   ![project2](project2/image.png)
 * project3 文本分析工具（我直接做了一个简单的文本编辑器）
   ![project3](project3/image.png)
-* project4 表达式类型的实现
+* project4 表达式类型的实现  
   ![project4](project4/image.png)
 * project5 简单图像处理程序
   ![project5](project5/image.png)
