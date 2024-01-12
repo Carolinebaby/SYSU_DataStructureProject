@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FindDialog</class>
+ <widget class="QDialog" name="FindDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>380</width>
+    <height>73</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI Black</family>
+    <pointsize>10</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Search</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/icon/picture/search.png</normaloff>:/icon/picture/search.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(210, 228, 238);
+color:rgb(65, 101, 121);</string>
+  </property>
+  <widget class="QPushButton" name="findButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>30</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="accessibleName">
+    <string>search</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#6096B4;
+color:#EEE9DA;</string>
+   </property>
+   <property name="text">
+    <string>find</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="searchlabel">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>0</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>SEARCH</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="inputtext">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cascadia Code</family>
+     <pointsize>12</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 250, 234);
+border-radius: 5px;
+border:2px solid rgb(157, 204, 221);
+color:black;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

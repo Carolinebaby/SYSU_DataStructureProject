@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>picture/c-document.png</file>
+        <file>picture/cpp.png</file>
+        <file>picture/favicon.ico</file>
+        <file>picture/file.png</file>
+        <file>picture/floppy-disk.png</file>
+        <file>picture/open-folder.png</file>
+        <file>picture/search.png</file>
+        <file>picture/txt.png</file>
+        <file>picture/txt_file-txt.png</file>
+        <file>picture/statistics.png</file>
+        <file>picture/list.png</file>
+        <file>picture/side-menu.png</file>
+        <file>picture/redo.png</file>
+        <file>picture/undo.png</file>
+        <file>picture/logout.png</file>
+        <file>picture/scissors.png</file>
+        <file>picture/copy.png</file>
+        <file>picture/paste.png</file>
+        <file>picture/information.png</file>
+        <file>picture/statistic.png</file>
+        <file>picture/bar-chart.png</file>
+    </qresource>
+</RCC>
