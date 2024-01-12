@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>decision-tree.png</file>
+        <file>mind-map.png</file>
+    </qresource>
+</RCC>

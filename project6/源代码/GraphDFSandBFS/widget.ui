@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GraphAnalysis</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/image/mind-map.png</normaloff>:/image/mind-map.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#D8D9DA;</string>
+  </property>
+  <widget class="QPlainTextEdit" name="graphInput">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>591</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cascadia Code</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 254, 251);
+border: 3px solid black;
+border-bottom: none; </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dfsSequence">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 #61677A);
+border-radius:10px;
+}
+
+QPushButton:pressed{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(0, 0, 0));
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>深度优先遍历序列</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="output">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>390</y>
+     <width>591</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cascadia Code</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 254, 251);
+border: 3px solid black;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="InputLabel1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>591</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#61677A;
+color:white;
+border: 3px solid black;
+border-bottom: none; 
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>输入</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="outputLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>591</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#61677A;
+color:white;
+border: 3px solid black;
+border-bottom: none; 
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>输出</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bfsSequence">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>230</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 #61677A);
+border-radius:10px;
+}
+
+QPushButton:pressed{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(0, 0, 0));
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>广度优先遍历序列</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dfsTree">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>370</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 #61677A);
+border-radius:10px;
+}
+
+QPushButton:pressed{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(0, 0, 0));
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>深度优先生成树</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bfsTree">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>500</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 #61677A);
+border-radius:10px;
+}
+
+QPushButton:pressed{
+color:white;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:1, stop:1 rgb(0, 0, 0));
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>广度优先生成树</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="InputLabel2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>281</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#61677A;
+color:white;
+border: 3px solid black;
+border-right: none; 
+border-bottom-left-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>起点</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="startInput">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>300</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cascadia Code</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 254, 251);
+border: 3px solid black;
+border-bottom-right-radius: 5px;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
